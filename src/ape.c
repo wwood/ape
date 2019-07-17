@@ -40,6 +40,7 @@ void dist_dna(unsigned char *x, int *n, int *s, int *model, double *d,
 	      double *BF, int *pairdel, int *variance, double *var,
 	      int *gamma, double *alpha);
 void dist_nodes(int *n, int *m, int *e1, int *e2, double *el, int *N, double *D);
+void dist_nodes_printer(int *n, int *m, int *e1, int *e2, double *el, int *N);
 void C_ewLasso(double *D, int *N, int *e1, int *e2);
 void GlobalDeletionDNA(unsigned char *x, int *n, int *s, int *keep);
 void mat_expo(double *P, int *nr);
@@ -101,6 +102,7 @@ static R_CMethodDef C_entries[] = {
     {"delta_plot", (DL_FUNC) &delta_plot, 5},
     {"dist_dna", (DL_FUNC) &dist_dna, 11},
     {"dist_nodes", (DL_FUNC) &dist_nodes, 7},
+    {"dist_nodes_printer", (DL_FUNC) &dist_nodes_printer, 6},
     {"C_ewLasso", (DL_FUNC) &C_ewLasso, 4},
     {"GlobalDeletionDNA", (DL_FUNC) &GlobalDeletionDNA, 4},
     {"mat_expo", (DL_FUNC) &mat_expo, 2},
